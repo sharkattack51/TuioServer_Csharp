@@ -42,13 +42,13 @@ class TuioSample
 		{
 			switch(pt.ptEvent)
 			{
-				case UrgPoint.POINT_EVENT.DOWN:
+				case TrackingPoint.POINT_EVENT.DOWN:
 
 					// cursor add
 					TuioCursor tcur_new = this.server.addTuioCursor((float)pt.position.X, (float)pt.position.Y);
 					break;
 
-				case UrgPoint.POINT_EVENT.MOVE:
+				case TrackingPoint.POINT_EVENT.MOVE:
 
 					// cursor update
 					foreach (TuioCursor tcur_move in this.server.getTuioCursors())
@@ -61,7 +61,7 @@ class TuioSample
 					}
 					break;
 
-				case UrgPoint.POINT_EVENT.UP:
+				case TrackingPoint.POINT_EVENT.UP:
 
 					// cursor remove
 					foreach (TuioCursor tcur_del in this.server.getTuioCursors())
